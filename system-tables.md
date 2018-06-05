@@ -1,14 +1,27 @@
-echo Producers
+#echo Producers
+
 ./cleos.sh get table eosio eosio producers
-echo Global
+
+#echo Global
+
 ./cleos.sh get table eosio eosio global
-echo Voters
+
+#echo Voters
+
 ./cleos.sh get table eosio eosio voters
-echo UserRes
+
+#echo UserRes
+
 ./cleos.sh get table eosio eosio userres
-echo totalband
+
+#echo totalband
+
 ./cleos.sh get table eosio eosio totalband
-echo delband
+
+#echo delband
+
 ./cleos.sh get table eosio eosio delband
-echo refunds
+
+#echo refunds
+
 ./cleos.sh get table eosio eosio refunds
