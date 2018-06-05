@@ -82,7 +82,7 @@ Options:
   --max-cpu-usage-ms UINT     set an upper limit on the milliseconds of cpu usage budget, for the execution of the transaction (defaults to 0 which means no limit)
   --max-net-usage UINT        set an upper limit on the net usage budget, in bytes, for the transaction (defaults to 0 which means no limit)
 ```
-4.执行提议
+**4.执行提议**
 ```
 $./cleos.sh multisig exec  prop111 eosstore4321 -p eosstore4321
 ```
@@ -109,7 +109,7 @@ Options:
   --max-cpu-usage-ms UINT     set an upper limit on the milliseconds of cpu usage budget, for the execution of the transaction (defaults to 0 which means no limit)
   --max-net-usage UINT        set an upper limit on the net usage budget, in bytes, for the transaction (defaults to 0 which means no limit)
 ```
-
+***
 #我们可以通过这条命令看到对应账户的提议
 ```
 $./cleos.sh get table eosio.msig eosstore4321 proposal
