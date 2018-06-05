@@ -18,7 +18,7 @@ Subcommands:
 
 ***
 
-如果我们想提议意见事，主要有以下几个步骤：
+#如果我们想提议意见事，主要有以下几个步骤：
 
 **1.我们能够通过命令查到当前有多少生产者可以支持**
 ```
@@ -81,4 +81,12 @@ Options:
   -p,--permission TEXT ...    An account and permission level to authorize, as in 'account@permission'
   --max-cpu-usage-ms UINT     set an upper limit on the milliseconds of cpu usage budget, for the execution of the transaction (defaults to 0 which means no limit)
   --max-net-usage UINT        set an upper limit on the net usage budget, in bytes, for the transaction (defaults to 0 which means no limit)
+```
+#我们可以通过这条命令看到对应账户的提议
+```
+$./cleos.sh get table eosio.msig eosstore4321 proposal
+```
+#我们可以通过下面的命令查看到对应账户支持的提议
+```
+$./cleos.sh get table eosio.msig eosstore4321 approvals
 ```
