@@ -82,6 +82,34 @@ Options:
   --max-cpu-usage-ms UINT     set an upper limit on the milliseconds of cpu usage budget, for the execution of the transaction (defaults to 0 which means no limit)
   --max-net-usage UINT        set an upper limit on the net usage budget, in bytes, for the transaction (defaults to 0 which means no limit)
 ```
+4.执行提议
+```
+$./cleos.sh multisig exec  prop111 eosstore4321 -p eosstore4321
+```
+```
+root@ip-172-30-101-34:~/EOS-Jungle-Testnet# ./cleos.sh multisig exec
+ERROR: RequiredError: proposer
+Execute proposed transaction
+Usage: /root/eos/build/programs/cleos/cleos multisig exec [OPTIONS] proposer proposal_name [executer]
+
+Positionals:
+  proposer TEXT               proposer name (string) (required)
+  proposal_name TEXT          proposal name (string) (required)
+  executer TEXT               account paying for execution (string)
+
+Options:
+  -h,--help                   Print this help message and exit
+  -x,--expiration             set the time in seconds before a transaction expires, defaults to 30s
+  -f,--force-unique           force the transaction to be unique. this will consume extra bandwidth and remove any protections against accidently issuing the same transaction multiple times
+  -s,--skip-sign              Specify if unlocked wallet keys should be used to sign transaction
+  -j,--json                   print result as json
+  -d,--dont-broadcast         don't broadcast transaction to the network (just print to stdout)
+  -r,--ref-block TEXT         set the reference block num or block id used for TAPOS (Transaction as Proof-of-Stake)
+  -p,--permission TEXT ...    An account and permission level to authorize, as in 'account@permission'
+  --max-cpu-usage-ms UINT     set an upper limit on the milliseconds of cpu usage budget, for the execution of the transaction (defaults to 0 which means no limit)
+  --max-net-usage UINT        set an upper limit on the net usage budget, in bytes, for the transaction (defaults to 0 which means no limit)
+```
+
 #我们可以通过这条命令看到对应账户的提议
 ```
 $./cleos.sh get table eosio.msig eosstore4321 proposal
