@@ -28,6 +28,7 @@ $./cleos.sh get account eosio.prods
 ```
  $./cleos.sh multisig propose prop111 [{"actor": "eosio.prods", "permission": "active"}] [{"actor": "eosio.prods", "permission": "active"}] eosio.token transfer '{"from": "eosio", "to": "eosstore4321", "quantity": "123.0000 EOS", "memo": "test"}'  eosstore4321 34 -p eosstore4321
 ```
+这里的命令是需要eosio.prods列表中所有的人都同意才可以执行提案，如果想要指定的人的话可以分别把列表中的人列出来
 ```
 Usage: /root/eos/build/programs/cleos/cleos multisig propose [OPTIONS] proposal_name requested_permissions trx_permissions contract action data [proposer] [proposal_expiration]
 
