@@ -2,7 +2,7 @@
 
 #multisig总共有6个action，如下：
 ```
-root@ip-172-30-101-34:~/EOS-Jungle-Testnet# ./cleos.sh multisig 
+~/EOS-Jungle-Testnet# ./cleos.sh multisig 
 ERROR: RequiredError: Subcommand required
 Multisig contract commands
 Usage: /root/eos/build/programs/cleos/cleos multisig SUBCOMMAND
@@ -47,7 +47,7 @@ Positionals:
 $./cleos.sh multisig approve eosstore4321 prop111 '{"actor": "eosstore4321", "permission": "active"}' -p eossotre4321
 ```
 ```
-root@ip-172-30-101-34:~/EOS-Jungle-Testnet# ./cleos.sh multisig approve 
+:~/EOS-Jungle-Testnet# ./cleos.sh multisig approve 
 ERROR: RequiredError: proposer
 Approve proposed transaction
 Usage: /root/eos/build/programs/cleos/cleos multisig approve [OPTIONS] proposer proposal_name permissions
@@ -74,7 +74,7 @@ Options:
 $./cleos.sh multisig exec  prop111 eosstore4321 -p eosstore4321
 ```
 ```
-root@ip-172-30-101-34:~/EOS-Jungle-Testnet# ./cleos.sh multisig exec
+:~/EOS-Jungle-Testnet# ./cleos.sh multisig exec
 ERROR: RequiredError: proposer
 Execute proposed transaction
 Usage: /root/eos/build/programs/cleos/cleos multisig exec [OPTIONS] proposer proposal_name [executer]
