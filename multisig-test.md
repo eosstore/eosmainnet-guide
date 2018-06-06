@@ -22,24 +22,11 @@ Subcommands:
 
 **1.我们能够通过命令查到当前有多少生产者可以支持**
 ```
-$./cleos.sh multisig propose prop111 '[{"actor": "eosio.prods", "permission": "active"}]' '[{"actor": "eosio.prods", "permission": "active"}]' eosio.token transfer '{"from": "eosio", "to": "eosstore4321", "quantity": "123.0000 EOS", "memo": "test"}' eosstore4321 24 -p eosstore4321
-```
-```
-Usage: /root/eos/build/programs/cleos/cleos multisig propose [OPTIONS] proposal_name requested_permissions trx_permissions contract action data [proposer] [proposal_expiration]
-
-Positionals:
-  proposal_name TEXT          proposal name (string) (required)
-  requested_permissions TEXT  The JSON string or filename defining requested permissions (required)
-  trx_permissions TEXT        The JSON string or filename defining transaction permissions (required)
-  contract TEXT               contract to wich deferred transaction should be delivered (required)
-  action TEXT                 action of deferred transaction (required)
-  data TEXT                   The JSON string or filename defining the action to propose (required)
-  proposer TEXT               Account proposing the transaction
-  proposal_expiration         Proposal expiration interval in hours
+$./cleos.sh get account eosio.prods
 ```
 **2.申请提议**
 ```
- $./cleos.sh multisig propose transfer [{"actor": "eosio.prods", "permission": "active"}] [{"actor": "eosio", "permission": "active"}] eosio.token transfer '{"from": "eosio", "to": "eosstore4321", "quantity": "123.0000 EOS", "memo": "test"}'  eosstore4321 34 -p eosstore4321
+ $./cleos.sh multisig propose transfer [{"actor": "eosio.prods", "permission": "active"}] [{"actor": "eosio.prods", "permission": "active"}] eosio.token transfer '{"from": "eosio", "to": "eosstore4321", "quantity": "123.0000 EOS", "memo": "test"}'  eosstore4321 34 -p eosstore4321
 ```
 ```
 Usage: /root/eos/build/programs/cleos/cleos multisig propose [OPTIONS] proposal_name requested_permissions trx_permissions contract action data [proposer] [proposal_expiration]
